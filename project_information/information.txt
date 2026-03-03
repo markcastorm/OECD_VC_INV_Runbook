@@ -1,0 +1,53 @@
+i believe its a new dawn new begining its a new run book  howp you have gon through the previous code see how good it its and its architecture 
+(D:\Projects\SIMBA-RUNBOOKS\JGBH_BOJ_Runbook
+"D:\Projects\SIMBA-RUNBOOKS\JGBH_BOJ_Runbook\config.py"
+"D:\Projects\SIMBA-RUNBOOKS\JGBH_BOJ_Runbook\file_generator.py"
+"D:\Projects\SIMBA-RUNBOOKS\JGBH_BOJ_Runbook\logger_setup.py"
+"D:\Projects\SIMBA-RUNBOOKS\JGBH_BOJ_Runbook\orchestrator.py"
+"D:\Projects\SIMBA-RUNBOOKS\JGBH_BOJ_Runbook\parser.py"
+"D:\Projects\SIMBA-RUNBOOKS\JGBH_BOJ_Runbook\scraper.py"
+"D:\Projects\SIMBA-RUNBOOKS\JGBH_BOJ_Runbook\requirements.txt"
+
+) analyze the scripts weel we go na use the architecture 
+
+now weare getting started on a new runnbook(D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\project_information\OECD_VC_INV_Runbook.xlsx) its a excell file
+the manual data (D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\project_information\OECD_VC_INV_DATA_20230703.xlsx)
+here is a csv format of it (D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\project_information\OECD_VC_INV_DATA_20230703 - DATA.csv)
+HERE IS THE MANUALY SCRAPED DATA REPORT and 
+Meta  file(D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\project_information\OECD_VC_INV_META_20230703.xlsx)in xls
+
+analyze them first before we started 
+thistime we will  have the config.py  add the necessary collumns mapinng since the sub headers and headers in the manual data will be exactly the way they are to every output and in the exact arrangemen 
+(D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\project_information\OECD_VC_INV_DATA_20230703 - DATA.csv)  analyze these files verry keenly they are verry important  lets get started
+
+lets first start with the screper.py 
+we need to  visit this link using selenium stealth ensure we mimic human clicks  like this (D:\Projects\SIMBA-RUNBOOKS\FREIGHTINFO_MARAD_Runbook\scraper.py) and winreg too
+
+lets start with this (https://stats.oecd.org/Index.aspx?DataSetCode=VC_INVEST) when you visit the site it will look  like this (D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\project_information\image1.png)
+here is a sample html (D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\project_information\sample.txt)
+
+ first things first we will be checking the release date (<div><span class="MuiTypography-root MuiTypography-body2 css-nfh1jc"><span aria-label="" class=""><span class="jss151">Last updated</span>: </span>February 25, 2026 at 4:37:19 PM</span></div>)
+  this date will help us decided whether there is a new data so on the first run we pick the date first  save it then download the file if we come a gain and find the same date we dont download the data since there is no new data you get the gist if there is a new date we donload the new file and proceed 
+
+  after picking the date we save irt= somwhere in a json file next we look for the download button dynamically (<div role="listitem"><button class="MuiButtonBase-root MuiButton-root jss123 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root jss123 MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary jss122 css-1m9u8rl" tabindex="0" type="button" aria-pressed="false" aria-haspopup="true" data-testid="downloads-button" aria-expanded="false" aria-label="" aria-hidden="false"><span class="MuiButton-icon MuiButton-startIcon jss124 MuiButton-iconSizeMedium css-1l6c7y9"><svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="GetAppIcon"><path d="M19 9h-4V3H9v6H5l7 7zM5 18v2h14v-2z"></path></svg></span>Download</button></div>)    we click it  a dropdown like this will pop out (<div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiPopover-paper MuiMenu-paper MuiMenu-paper css-1b89tg7" tabindex="-1" style="opacity: 1; transform: none; transition: opacity 252ms cubic-bezier(0.4, 0, 0.2, 1), transform 168ms cubic-bezier(0.4, 0, 0.2, 1); top: 332px; left: 894px; transform-origin: 179px 0px;"><ul class="MuiList-root MuiList-padding MuiMenu-list css-r8u8y9" role="menu" tabindex="-1"><li role="menuitem" tabindex="0" aria-label="Filtered data in tabular text (CSV)" aria-disabled="false" autofocus=""><a class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary jss131 css-1m9u8rl" tabindex="0" href="https://sdmx.oecd.org/public/rest/data/OECD.SDD.TPS,DSD_VC@DF_VC_INV,/...USD_EXC.A?startPeriod=2007&amp;dimensionAtObservation=AllDimensions&amp;format=csvfilewithlabels" id="csv.selection" download="OECD.SDD.TPS,DSD_VC@DF_VC_INV,,filtered,2026-03-03 11-27-53.csv">Filtered data in tabular text (CSV)</a></li><li role="menuitem" tabindex="0" aria-label="Unfiltered data in tabular text (CSV)" aria-disabled="false"><a class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary jss131 css-1m9u8rl" tabindex="0" href="https://sdmx.oecd.org/public/rest/data/OECD.SDD.TPS,DSD_VC@DF_VC_INV,/all?dimensionAtObservation=AllDimensions&amp;format=csvfilewithlabels" id="csv.all" download="OECD.SDD.TPS,DSD_VC@DF_VC_INV,,complete,2026-03-03 11-27-53.csv">Unfiltered data in tabular text (CSV)</a></li><li role="menuitem" tabindex="0" aria-label="Unfiltered reference information in tabular text (CSV)" aria-disabled="false"><a class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary jss131 css-1m9u8rl" tabindex="0" href="https://sdmx.oecd.org/public/rest/v2/data/dataflow/OECD.SDD.TPS/DSD_VC@DF_VC_INV/~/?attributes=msd&amp;measures=none&amp;dimensionAtObservation=AllDimensions&amp;format=csvfilewithlabels" id="metadata.all" download="OECD.SDD.TPS_DSD_VC@DF_VC_INV_latest_all_metadata.csv">Unfiltered reference information in tabular text (CSV)</a></li></ul></div>) we click this button out of the list (Filtered data in tabular text (CSV)) dynamically this will trigger  the download of a file csv which will be saved in downlodsa folder with timestamped subfolders for every run so add a detect feature to watch for the new downloaded file 
+
+  like this (D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\project_information\image2.png) see in the screen shot  so ensure to simulate human clicks to avoid detection 
+  we ensure we click (<li role="menuitem" tabindex="0" aria-label="Filtered data in tabular text (CSV)" aria-disabled="false" autofocus=""><a class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary jss131 css-1m9u8rl" tabindex="0" href="https://sdmx.oecd.org/public/rest/data/OECD.SDD.TPS,DSD_VC@DF_VC_INV,/...USD_EXC.A?startPeriod=2007&amp;dimensionAtObservation=AllDimensions&amp;format=csvfilewithlabels" id="csv.selection" download="OECD.SDD.TPS,DSD_VC@DF_VC_INV,,filtered,2026-03-03 11-27-53.csv">Filtered data in tabular text (CSV)</a></li>)
+dynamicaly before closing the browser here is a sample of the downloaded file (D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\project_information\OECD.SDD.TPS,DSD_VC@DF_VC_INV,+...USD_EXC.A.csv)
+analyze it keenly  based on the headers and sub headers in the (D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\project_information\OECD_VC_INV_DATA_20230703 - DATA.csv) we can organize the maping dynamically the paser has to always scall the downloaded file se where the headers are and how the data is stractured befor trying to pull the data so that the script can easily adapt any time 
+(D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\project_information\image4.png) so you can see the avalable header no when filter ring we ahave to concentratet on this here is a sample of how you will filter 
+based on the first header in the data file (Australia: Venture capital investments, Total, USD, current price) we are supposed to filter australia  in the (Reference area) or (REF_AREA)
+like this (D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\project_information\image5.png) next we look for this header column w (Measure
+) we filter for (Venture capital investments (market statistics))    like this (D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\project_information\image6.png)
+like that then the ;ast filter is in (Business development stage) we find this column and filter Total  (D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\project_information\image7.png)
+))like this now based on the (TIME_PERIOD) colum it can give you a clear picture on how to mape the values based on the years  the values are on this columns (OBS_VALUE)
+i need this to be so dynamic without hard coding so that the script can adopt perfectly  let me give you anothe example this sub header in the output file (France: Venture capital investments, Seed, USD, current prices)
+you can see wew ill filter Area (France), Venture capital investments (market statistics) and (Seed) like this (D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\project_information\image8.png)
+you can see  its as easy as that no hardcording the file generato will be incharge of generating the meta data and zipfile in the output folder with timestamped subfolders for every run and latest subfolder always holding the latest files on every run    (It is important. Copy the data from the source file to the data file so that the decimal point is not lost. Use only .xlsx format for meta and data files.)
+ yes yes (D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\project_information\image9.png)ensure we pick the values from the source file with all there decimal point the way it exaclty is this is finacial data so ensure this is dynamic and picks the correct values ok 
+
+
+
+
+
+

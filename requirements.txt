@@ -1,0 +1,12 @@
+# OECD_VC_INV Runbook - Python Dependencies
+
+# Undetected ChromeDriver (anti-bot stealth, replaces plain selenium)
+undetected-chromedriver>=3.5.0
+
+# Selenium (used by undetected-chromedriver internally)
+selenium>=4.15.0
+
+# Excel file output
+openpyxl>=3.1.2
+
+# Logging, csv, json, os, zipfile, shutil, winreg — all standard library

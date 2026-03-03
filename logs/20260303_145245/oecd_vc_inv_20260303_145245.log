@@ -1,0 +1,82 @@
+2026-03-03 14:52:45 - root - INFO - ============================================================
+2026-03-03 14:52:45 - root - INFO - Logging initialized
+2026-03-03 14:52:45 - root - INFO - Log file      : ./logs\20260303_145245\oecd_vc_inv_20260303_145245.log
+2026-03-03 14:52:45 - root - INFO - Log level     : DEBUG
+2026-03-03 14:52:45 - root - INFO - Run timestamp : 20260303_145245
+2026-03-03 14:52:45 - root - INFO - ============================================================
+2026-03-03 14:52:45 - root - INFO - Starting OECD_VC_INV data extraction pipeline
+2026-03-03 14:52:45 - root - INFO - STEP 1: Starting download...
+2026-03-03 14:52:46 - scraper - INFO - Checking Windows Registry for Chrome version...
+2026-03-03 14:52:46 - scraper - INFO - Found Chrome version: 145.0.7632.117 (major: 145)
+2026-03-03 14:52:59 - uc - DEBUG - created a temporary folder in which the user-data (profile) will be stored during this
+session, and added it to chrome startup arguments: --user-data-dir=C:\Users\castor\AppData\Local\Temp\tmp45nq6ej0
+2026-03-03 14:52:59 - uc - DEBUG - checking if C:\Users\castor\AppData\Local\Google/Chrome/Application\chrome.exe exists and is executable
+2026-03-03 14:52:59 - uc - DEBUG - checking if C:\Program Files\Google/Chrome/Application\chrome.exe exists and is executable
+2026-03-03 14:52:59 - uc - DEBUG - found! using C:\Program Files\Google/Chrome/Application\chrome.exe
+2026-03-03 14:52:59 - uc - DEBUG - did not find a bad exit_type flag 
+2026-03-03 14:53:01 - scraper - INFO - Chrome driver initialized successfully
+2026-03-03 14:53:01 - scraper - INFO - Download directory: D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\downloads\20260303_145245
+2026-03-03 14:53:01 - scraper - INFO - Navigating to: https://stats.oecd.org/Index.aspx?DataSetCode=VC_INVEST
+2026-03-03 14:53:07 - scraper - INFO - Page load delay: 6s
+2026-03-03 14:53:13 - scraper - INFO - Looking for 'Last updated' date on page...
+2026-03-03 14:53:13 - scraper - INFO - 'Last updated' date found: February 25, 2026 at 4:37:19 PM
+2026-03-03 14:53:13 - scraper - INFO - No release date cache found
+2026-03-03 14:53:13 - scraper - INFO - First run — no cached date. Will download.
+2026-03-03 14:53:13 - scraper - INFO - Clicking Download button...
+2026-03-03 14:53:16 - scraper - INFO - Download button clicked
+2026-03-03 14:53:18 - scraper - INFO - Waiting for download dropdown menu...
+2026-03-03 14:53:24 - scraper - INFO - Clicked 'Filtered data in tabular text (CSV)'
+2026-03-03 14:53:24 - scraper - INFO - Watching download directory: D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\downloads\20260303_145245
+2026-03-03 14:53:24 - scraper - INFO - Download started (direct) — monitoring for completion...
+2026-03-03 14:53:24 - scraper - INFO - Download complete: OECD.SDD.TPS,DSD_VC@DF_VC_INV,+...USD_EXC.A.csv (740,998 bytes)
+2026-03-03 14:53:24 - uc - DEBUG - webdriver process ended
+2026-03-03 14:53:24 - uc - DEBUG - gracefully closed browser
+2026-03-03 14:53:25 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\castor\\AppData\\Local\\Temp\\tmp45nq6ej0\\Default\\Cache\\No_Vary_Search\\journal.baj'
+retrying...
+2026-03-03 14:53:25 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\castor\\AppData\\Local\\Temp\\tmp45nq6ej0\\Default\\Cache\\No_Vary_Search\\journal.baj'
+retrying...
+2026-03-03 14:53:25 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\castor\\AppData\\Local\\Temp\\tmp45nq6ej0\\Default\\Cache\\No_Vary_Search\\journal.baj'
+retrying...
+2026-03-03 14:53:25 - uc - DEBUG - successfully removed C:\Users\castor\AppData\Local\Temp\tmp45nq6ej0
+2026-03-03 14:53:25 - scraper - INFO - Browser closed immediately after download detected
+2026-03-03 14:53:25 - scraper - INFO - Release date saved to cache: February 25, 2026 at 4:37:19 PM
+2026-03-03 14:53:25 - root - INFO - Download complete: D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\downloads\20260303_145245\OECD.SDD.TPS,DSD_VC@DF_VC_INV,+...USD_EXC.A.csv
+2026-03-03 14:53:25 - root - INFO - Release date: February 25, 2026 at 4:37:19 PM
+2026-03-03 14:53:25 - root - INFO - STEP 2: Starting parse...
+2026-03-03 14:53:25 - parser - INFO - Parsing OECD CSV: D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\downloads\20260303_145245\OECD.SDD.TPS,DSD_VC@DF_VC_INV,+...USD_EXC.A.csv
+2026-03-03 14:53:25 - parser - INFO - Using encoding: utf-8
+2026-03-03 14:53:25 - parser - INFO - Scanning CSV header row for required columns...
+2026-03-03 14:53:25 - parser - DEBUG -   Column 'REF_AREA' found at index 4
+2026-03-03 14:53:25 - parser - DEBUG -   Column 'Reference area' found at index 5
+2026-03-03 14:53:25 - parser - DEBUG -   Column 'MEASURE' found at index 6
+2026-03-03 14:53:25 - parser - DEBUG -   Column 'Measure' found at index 7
+2026-03-03 14:53:25 - parser - DEBUG -   Column 'BUSINESS_DEVELOPMENT_STAGE' found at index 8
+2026-03-03 14:53:25 - parser - DEBUG -   Column 'Business development stage' found at index 9
+2026-03-03 14:53:25 - parser - DEBUG -   Column 'TIME_PERIOD' found at index 14
+2026-03-03 14:53:25 - parser - DEBUG -   Column 'OBS_VALUE' found at index 16
+2026-03-03 14:53:25 - parser - INFO - All 8 required columns located.
+2026-03-03 14:53:25 - parser - INFO - Filtering rows: MEASURE == 'VC_INV_MKT'
+2026-03-03 14:53:25 - parser - INFO - Rows processed: 2375 | Rows skipped: 0
+2026-03-03 14:53:25 - parser - INFO - Unique columns (country×stage): 136
+2026-03-03 14:53:25 - parser - INFO - Year range: 2007 – 2024
+2026-03-03 14:53:25 - parser - INFO - Column codes generated: 136
+2026-03-03 14:53:25 - parser - INFO - Pivot complete: 18 year rows × 136 columns
+2026-03-03 14:53:25 - root - INFO - Parse complete: 136 columns, 18 year rows
+2026-03-03 14:53:25 - root - INFO - STEP 3: Generating output files...
+2026-03-03 14:53:25 - file_generator - INFO - Creating data .xlsx file...
+2026-03-03 14:53:25 - file_generator - INFO - Data file saved : ./output\20260303_145245\OECD_VC_INV_DATA_20260303_145245.xlsx (18 year rows × 136 columns)
+2026-03-03 14:53:25 - file_generator - INFO - Creating metadata .xlsx file...
+2026-03-03 14:53:25 - file_generator - INFO - Metadata file saved : ./output\20260303_145245\OECD_VC_INV_META_20260303_145245.xlsx (136 rows)
+2026-03-03 14:53:25 - file_generator - INFO - Creating zip archive...
+2026-03-03 14:53:26 - file_generator - INFO -   Added to zip: OECD_VC_INV_DATA_20260303_145245.xlsx
+2026-03-03 14:53:26 - file_generator - INFO -   Added to zip: OECD_VC_INV_META_20260303_145245.xlsx
+2026-03-03 14:53:26 - file_generator - INFO - Zip archive saved: ./output\20260303_145245\OECD_VC_INV_20260303_145245.zip (50,202 bytes)
+2026-03-03 14:53:26 - file_generator - INFO - Copying files to 'latest' folder...
+2026-03-03 14:53:26 - file_generator - INFO -   Copied data: ./output\latest\OECD_VC_INV_DATA_latest.xlsx
+2026-03-03 14:53:26 - file_generator - INFO -   Copied meta: ./output\latest\OECD_VC_INV_META_latest.xlsx
+2026-03-03 14:53:26 - file_generator - INFO -   Copied zip: ./output\latest\OECD_VC_INV_latest.zip
+2026-03-03 14:53:26 - root - INFO - Output file generation complete
+2026-03-03 14:53:26 - root - INFO - Pipeline completed successfully in 0:00:40.384668
+2026-03-03 14:53:26 - root - INFO - Columns: 136 | Year rows: 18
+2026-03-03 14:53:26 - uc - INFO - ensuring close
+2026-03-03 14:53:26 - uc - DEBUG - webdriver process ended

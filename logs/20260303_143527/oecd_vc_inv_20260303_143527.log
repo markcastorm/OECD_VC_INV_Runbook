@@ -1,0 +1,48 @@
+2026-03-03 14:35:32 - root - INFO - ============================================================
+2026-03-03 14:35:32 - root - INFO - Logging initialized
+2026-03-03 14:35:32 - root - INFO - Log file      : ./logs\20260303_143527\oecd_vc_inv_20260303_143527.log
+2026-03-03 14:35:32 - root - INFO - Log level     : DEBUG
+2026-03-03 14:35:32 - root - INFO - Run timestamp : 20260303_143527
+2026-03-03 14:35:32 - root - INFO - ============================================================
+2026-03-03 14:35:32 - root - INFO - Starting OECD_VC_INV data extraction pipeline
+2026-03-03 14:35:32 - root - INFO - STEP 1: Starting download...
+2026-03-03 14:35:35 - scraper - INFO - Checking Windows Registry for Chrome version...
+2026-03-03 14:35:35 - scraper - INFO - Found Chrome version: 145.0.7632.117 (major: 145)
+2026-03-03 14:35:47 - uc - DEBUG - created a temporary folder in which the user-data (profile) will be stored during this
+session, and added it to chrome startup arguments: --user-data-dir=C:\Users\castor\AppData\Local\Temp\tmpgcxzr1ca
+2026-03-03 14:35:47 - uc - DEBUG - checking if C:\Users\castor\AppData\Local\Google/Chrome/Application\chrome.exe exists and is executable
+2026-03-03 14:35:47 - uc - DEBUG - checking if C:\Program Files (x86)\Google/Chrome/Application\chrome.exe exists and is executable
+2026-03-03 14:35:47 - uc - DEBUG - checking if C:\Program Files\Google/Chrome/Application\chrome.exe exists and is executable
+2026-03-03 14:35:47 - uc - DEBUG - found! using C:\Program Files\Google/Chrome/Application\chrome.exe
+2026-03-03 14:35:47 - uc - DEBUG - did not find a bad exit_type flag 
+2026-03-03 14:35:50 - scraper - INFO - Chrome driver initialized successfully
+2026-03-03 14:35:50 - scraper - INFO - Download directory: D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\downloads\20260303_143527
+2026-03-03 14:35:50 - scraper - INFO - Navigating to: https://stats.oecd.org/Index.aspx?DataSetCode=VC_INVEST
+2026-03-03 14:35:57 - scraper - INFO - Page load delay: 6s
+2026-03-03 14:36:03 - scraper - INFO - Looking for 'Last updated' date on page...
+2026-03-03 14:36:03 - scraper - INFO - 'Last updated' date found: February 25, 2026 at 4:37:19 PM
+2026-03-03 14:36:03 - scraper - INFO - No release date cache found
+2026-03-03 14:36:03 - scraper - INFO - First run — no cached date. Will download.
+2026-03-03 14:36:03 - scraper - INFO - Clicking Download button...
+2026-03-03 14:36:09 - scraper - INFO - Download button clicked
+2026-03-03 14:36:10 - scraper - INFO - Waiting for download dropdown menu...
+2026-03-03 14:36:13 - scraper - INFO - Clicked 'Filtered data in tabular text (CSV)'
+2026-03-03 14:36:13 - scraper - INFO - Watching for new CSV in: D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\downloads\20260303_143527
+2026-03-03 14:37:43 - scraper - ERROR - Download timed out after 90 seconds
+2026-03-03 14:37:43 - uc - DEBUG - webdriver process ended
+2026-03-03 14:37:43 - uc - DEBUG - gracefully closed browser
+2026-03-03 14:37:43 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\castor\\AppData\\Local\\Temp\\tmpgcxzr1ca\\Default\\Cache\\No_Vary_Search\\journal.baj'
+retrying...
+2026-03-03 14:37:43 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\castor\\AppData\\Local\\Temp\\tmpgcxzr1ca\\Default\\Cache\\No_Vary_Search\\journal.baj'
+retrying...
+2026-03-03 14:37:43 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\castor\\AppData\\Local\\Temp\\tmpgcxzr1ca\\Default\\Cache\\No_Vary_Search\\journal.baj'
+retrying...
+2026-03-03 14:37:43 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\castor\\AppData\\Local\\Temp\\tmpgcxzr1ca\\Default\\Cache\\No_Vary_Search\\journal.baj'
+retrying...
+2026-03-03 14:37:43 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\castor\\AppData\\Local\\Temp\\tmpgcxzr1ca\\Default\\Cache\\No_Vary_Search\\journal.baj'
+retrying...
+2026-03-03 14:37:43 - scraper - INFO - Browser closed
+2026-03-03 14:37:43 - root - ERROR - Download failed: Download timed out or file not found
+2026-03-03 14:37:43 - uc - INFO - ensuring close
+2026-03-03 14:37:43 - uc - DEBUG - webdriver process ended
+2026-03-03 14:37:44 - uc - DEBUG - successfully removed C:\Users\castor\AppData\Local\Temp\tmpgcxzr1ca

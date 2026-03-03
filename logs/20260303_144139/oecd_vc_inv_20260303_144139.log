@@ -1,0 +1,47 @@
+2026-03-03 14:41:40 - root - INFO - ============================================================
+2026-03-03 14:41:40 - root - INFO - Logging initialized
+2026-03-03 14:41:40 - root - INFO - Log file      : ./logs\20260303_144139\oecd_vc_inv_20260303_144139.log
+2026-03-03 14:41:40 - root - INFO - Log level     : DEBUG
+2026-03-03 14:41:40 - root - INFO - Run timestamp : 20260303_144139
+2026-03-03 14:41:40 - root - INFO - ============================================================
+2026-03-03 14:41:40 - root - INFO - Starting OECD_VC_INV data extraction pipeline
+2026-03-03 14:41:40 - root - INFO - STEP 1: Starting download...
+2026-03-03 14:41:41 - scraper - INFO - Checking Windows Registry for Chrome version...
+2026-03-03 14:41:41 - scraper - INFO - Found Chrome version: 145.0.7632.117 (major: 145)
+2026-03-03 14:41:53 - uc - DEBUG - created a temporary folder in which the user-data (profile) will be stored during this
+session, and added it to chrome startup arguments: --user-data-dir=C:\Users\castor\AppData\Local\Temp\tmp8ajhfmrl
+2026-03-03 14:41:53 - uc - DEBUG - checking if C:\Program Files (x86)\Google/Chrome/Application\chrome.exe exists and is executable
+2026-03-03 14:41:53 - uc - DEBUG - checking if C:\Users\castor\AppData\Local\Google/Chrome/Application\chrome.exe exists and is executable
+2026-03-03 14:41:53 - uc - DEBUG - checking if C:\Program Files\Google/Chrome/Application\chrome.exe exists and is executable
+2026-03-03 14:41:53 - uc - DEBUG - found! using C:\Program Files\Google/Chrome/Application\chrome.exe
+2026-03-03 14:41:53 - uc - DEBUG - did not find a bad exit_type flag 
+2026-03-03 14:41:56 - scraper - INFO - Chrome driver initialized successfully
+2026-03-03 14:41:56 - scraper - INFO - Download directory: D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\downloads\20260303_144139
+2026-03-03 14:41:56 - scraper - INFO - Navigating to: https://stats.oecd.org/Index.aspx?DataSetCode=VC_INVEST
+2026-03-03 14:42:02 - scraper - INFO - Page load delay: 6s
+2026-03-03 14:42:08 - scraper - INFO - Looking for 'Last updated' date on page...
+2026-03-03 14:42:08 - scraper - INFO - 'Last updated' date found: February 25, 2026 at 4:37:19 PM
+2026-03-03 14:42:08 - scraper - INFO - No release date cache found
+2026-03-03 14:42:08 - scraper - INFO - First run — no cached date. Will download.
+2026-03-03 14:42:08 - scraper - INFO - Clicking Download button...
+2026-03-03 14:42:14 - scraper - INFO - Download button clicked
+2026-03-03 14:42:15 - scraper - INFO - Waiting for download dropdown menu...
+2026-03-03 14:42:18 - scraper - INFO - Clicked 'Filtered data in tabular text (CSV)'
+2026-03-03 14:42:18 - scraper - INFO - Watching for new CSV in:
+2026-03-03 14:42:18 - scraper - INFO -   Custom dir : D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\downloads\20260303_144139
+2026-03-03 14:42:18 - scraper - INFO -   System dir : C:\Users\castor/Downloads
+2026-03-03 14:42:33 - scraper - DEBUG - Still waiting for download... (15s elapsed)
+2026-03-03 14:42:48 - scraper - DEBUG - Still waiting for download... (30s elapsed)
+2026-03-03 14:43:03 - scraper - DEBUG - Still waiting for download... (45s elapsed)
+2026-03-03 14:43:18 - scraper - DEBUG - Still waiting for download... (60s elapsed)
+2026-03-03 14:43:33 - scraper - DEBUG - Still waiting for download... (75s elapsed)
+2026-03-03 14:43:49 - scraper - ERROR - Download timed out after 90 seconds
+2026-03-03 14:43:49 - uc - DEBUG - webdriver process ended
+2026-03-03 14:43:49 - uc - DEBUG - gracefully closed browser
+2026-03-03 14:43:49 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\castor\\AppData\\Local\\Temp\\tmp8ajhfmrl\\Default\\Cache\\No_Vary_Search\\journal.baj'
+retrying...
+2026-03-03 14:43:49 - uc - DEBUG - successfully removed C:\Users\castor\AppData\Local\Temp\tmp8ajhfmrl
+2026-03-03 14:43:49 - scraper - INFO - Browser closed immediately after download detected
+2026-03-03 14:43:49 - root - ERROR - Download failed: Download timed out or file not found
+2026-03-03 14:43:49 - uc - INFO - ensuring close
+2026-03-03 14:43:49 - uc - DEBUG - webdriver process ended

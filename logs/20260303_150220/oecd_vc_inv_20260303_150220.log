@@ -1,0 +1,41 @@
+2026-03-03 15:02:21 - root - INFO - ============================================================
+2026-03-03 15:02:21 - root - INFO - Logging initialized
+2026-03-03 15:02:21 - root - INFO - Log file      : ./logs\20260303_150220\oecd_vc_inv_20260303_150220.log
+2026-03-03 15:02:21 - root - INFO - Log level     : DEBUG
+2026-03-03 15:02:21 - root - INFO - Run timestamp : 20260303_150220
+2026-03-03 15:02:21 - root - INFO - ============================================================
+2026-03-03 15:02:21 - root - INFO - Starting OECD_VC_INV data extraction pipeline
+2026-03-03 15:02:21 - root - INFO - STEP 1: Starting download...
+2026-03-03 15:02:22 - scraper - INFO - Checking Windows Registry for Chrome version...
+2026-03-03 15:02:22 - scraper - INFO - Found Chrome version: 145.0.7632.117 (major: 145)
+2026-03-03 15:02:33 - uc - DEBUG - created a temporary folder in which the user-data (profile) will be stored during this
+session, and added it to chrome startup arguments: --user-data-dir=C:\Users\castor\AppData\Local\Temp\tmp8e_j3mvj
+2026-03-03 15:02:33 - uc - DEBUG - checking if C:\Program Files (x86)\Google/Chrome/Application\chrome.exe exists and is executable
+2026-03-03 15:02:33 - uc - DEBUG - checking if C:\Program Files\Google/Chrome/Application\chrome.exe exists and is executable
+2026-03-03 15:02:33 - uc - DEBUG - found! using C:\Program Files\Google/Chrome/Application\chrome.exe
+2026-03-03 15:02:33 - uc - DEBUG - did not find a bad exit_type flag 
+2026-03-03 15:02:36 - scraper - INFO - Chrome driver initialized successfully
+2026-03-03 15:02:36 - scraper - INFO - Download directory: D:\Projects\SIMBA-RUNBOOKS\OECD_VC_INV_Runbook\downloads\20260303_150220
+2026-03-03 15:02:36 - scraper - INFO - Navigating to: https://stats.oecd.org/Index.aspx?DataSetCode=VC_INVEST
+2026-03-03 15:02:43 - scraper - INFO - Page load delay: 6s
+2026-03-03 15:02:49 - scraper - INFO - Looking for 'Last updated' date on page...
+2026-03-03 15:02:49 - scraper - INFO - 'Last updated' date found: February 25, 2026 at 4:37:19 PM
+2026-03-03 15:02:49 - scraper - INFO - Cached release date: February 25, 2026 at 4:37:19 PM
+2026-03-03 15:02:49 - scraper - INFO - No new data — date unchanged: February 25, 2026 at 4:37:19 PM
+2026-03-03 15:02:49 - uc - DEBUG - webdriver process ended
+2026-03-03 15:02:49 - uc - DEBUG - gracefully closed browser
+2026-03-03 15:02:49 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\castor\\AppData\\Local\\Temp\\tmp8e_j3mvj\\Default\\Cache\\No_Vary_Search\\journal.baj'
+retrying...
+2026-03-03 15:02:49 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\castor\\AppData\\Local\\Temp\\tmp8e_j3mvj\\Default\\Cache\\No_Vary_Search\\journal.baj'
+retrying...
+2026-03-03 15:02:49 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\castor\\AppData\\Local\\Temp\\tmp8e_j3mvj\\Default\\Cache\\No_Vary_Search\\journal.baj'
+retrying...
+2026-03-03 15:02:49 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\castor\\AppData\\Local\\Temp\\tmp8e_j3mvj\\Default\\Cache\\No_Vary_Search\\journal.baj'
+retrying...
+2026-03-03 15:02:49 - uc - DEBUG - When removing the temp profile, a PermissionError occured: [WinError 32] The process cannot access the file because it is being used by another process: 'C:\\Users\\castor\\AppData\\Local\\Temp\\tmp8e_j3mvj\\Default\\Cache\\No_Vary_Search\\journal.baj'
+retrying...
+2026-03-03 15:02:49 - scraper - INFO - Browser closed
+2026-03-03 15:02:49 - root - INFO - Pipeline stopped: No new data available (same release date)
+2026-03-03 15:02:49 - uc - INFO - ensuring close
+2026-03-03 15:02:50 - uc - DEBUG - webdriver process ended
+2026-03-03 15:02:50 - uc - DEBUG - successfully removed C:\Users\castor\AppData\Local\Temp\tmp8e_j3mvj
